@@ -7,10 +7,11 @@ ctx.set_source_rgb(0.8, 0.8, 0.8)
 ctx.paint()
 
 # Bezier curve
-ctx.move_to(50, 200)
+ctx.move_to(100, 200)
 ctx.curve_to(200, 350, 200, 100, 350, 250) 
 ctx.set_source_rgb(1, 0, 0)
 ctx.set_line_width(10)
+ctx.set_line_cap(cairo.LINE_CAP_ROUND)
 ctx.stroke()
 
 surface.write_to_png("bezier.png")
